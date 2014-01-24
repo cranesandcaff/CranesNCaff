@@ -1,0 +1,7 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+@import 'scss/variables.scss';
+
+.logo {
+    font-family: $brandFont, helvetica, arial, sans-serif;
+    font-weight: 700;
+}
