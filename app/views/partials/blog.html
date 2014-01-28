@@ -1,0 +1,10 @@
+<div ng-include="'partials/navbar.html'"></div>
+<div class="row">
+	<div class="container" ng-init="find()">
+		<article ng-repeat="article in articles">
+			<h2>{{article.title}}</h2>		
+			<h3>{{article.subtitle}}</h3>
+			<div ng-bind-html="article.content"></div>
+		</article>
+	</div>
+</div>

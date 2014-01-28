@@ -4,7 +4,8 @@ angular.module('cncv2App', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'angular-medium-editor'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -12,17 +13,44 @@ angular.module('cncv2App', [
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
-      .when('/login', {
+      //Please note, having a 'secret' route is in no way secure. Secure the API in the backend.
+      .when('/topsecretroute', {
         templateUrl: 'partials/login',
         controller: 'LoginCtrl'
       })
-      .when('/signup', {
+      .when('/evenmoretopsecretroute', {
         templateUrl: 'partials/signup',
         controller: 'SignupCtrl'
       })
       .when('/settings', {
         templateUrl: 'partials/settings',
         controller: 'SettingsCtrl',
+        authenticate: true
+      })
+      .when('/work', {
+        templateUrl: 'partials/work.html'
+      })
+      .when('/approach', {
+        templateUrl: 'partials/approach.html'
+      })
+      .when('/contact', {
+        templateUrl: 'partials/contact.html'
+      })
+      .when('/blog', {
+        templateUrl: 'partials/blog.html',
+        controller: 'ArticleCtrl'
+      })
+      .when('/admin', {
+        templateUrl: 'partials/admin.html',
+        authenticate: true
+      })
+      .when('/addArticle', {
+        templateUrl: 'partials/addArticle.html',
+        controller: 'ArticleCtrl',
+        authenticate: true
+      })
+      .when('/addAddiction', {
+        templateUrl: 'partials/addAddiction.html',
         authenticate: true
       })
       .otherwise({

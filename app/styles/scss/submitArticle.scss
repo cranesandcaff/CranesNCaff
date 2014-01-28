@@ -1,0 +1,5 @@
+.articleInput, .articleMain{
+	@extend .col-xs-6 !optional;
+	@extend .col-md-offset-3 !optional;
+	border:0;
+}
