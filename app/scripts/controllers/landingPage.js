@@ -2,11 +2,10 @@
 
 angular.module('cncv2App')
   .controller('landingPageCtrl', function ($scope,$http) {
-  	$scope.myInterval = 500;
   	$scope.pusssh = function(){
   		console.log('My Name is My Name')
   	}
-      $scope.myInterval = 5000;
+      $scope.myInterval = 500;
   var slides = $scope.slides = [];
   $scope.addSlide = function() {
     var newWidth = 600 + slides.length;

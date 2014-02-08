@@ -171,12 +171,11 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
 
   $scope.next = function() {
     var newIndex = (currentIndex + 1) % slides.length;
-    console.log('I will run forever');
 
     //Prevent this user-triggered transition from occurring if there is already one in progress
+    console.log('Before next');
     if (!$scope.$currentTransition) {
-      console.log('I\'ll go the first time.');
-      console.log('The problem is (!$scope.$currentTransition)')
+    	 console.log('Transition over');
       return self.select(slides[newIndex], 'next');
     }
   };

@@ -10,7 +10,7 @@
 	> .item{
 		display: none;
 		position: relative;
-		
+		@include transition(.6s ease-in-out left);
 
 		> img,
 		> a > img {
