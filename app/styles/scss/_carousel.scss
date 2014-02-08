@@ -1,0 +1,98 @@
+.carousel {
+	position: relative;
+}
+
+.carousel-inner {
+	position: relative;
+	overflow:hidden;
+	width:100%;
+
+	> .item{
+		display: none;
+		position: relative;
+		
+
+		> img,
+		> a > img {
+			display: block;
+			max-width:100%;
+			height:auto;
+			line-height: 1;
+		} 
+	}
+	> .active,
+	> .next,
+	> .pref { display:block; }
+
+	> .active{
+		left:0;
+	}
+
+	> .next,
+	> .pref {
+		position: absolute;
+		top:0;
+		width:100%;
+	}
+
+	> .next{
+		left: 100%;
+	}
+	> .prev {
+		left: -100%;
+	}
+	> .next.left,
+	> .prev.right {
+		left: 0;
+	}
+
+	> .active.left{
+		left: -100%;
+	}
+	> .active.right {
+		left:100%
+	}
+}
+.carousel-control {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	width: 15%;
+	font-size: 10rem;
+	color: $brandYellow;
+	text-align: center;
+
+	&.right{
+		left:auto;
+		right:0;
+	}
+
+	&:hover,
+	&:focus {
+		color: $brandYellow;
+		text-decoration: none;
+		opacity:.9;
+	}
+  .icon-prev,
+  .icon-next {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+  }
+  .icon-prev{
+    left: 50%;
+  }
+  .icon-next {
+    right: 50%;
+  }
+  .icon-prev,
+  .icon-next {
+    width:  20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+
+}

@@ -5,14 +5,7 @@ angular.module('cncv2App')
   	return $resource('/api/articles/:articleId', {
   		articleId: '@_id'
   	}, {
-  		create: {
-  			method: 'POST'
-  		},
-  		update: {
-  			method: 'PUT'
-  		},
-  		delte: {
-  			method: 'DELETE'
-  		}
+      
+
   	});
   });

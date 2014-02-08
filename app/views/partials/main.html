@@ -1,40 +1,51 @@
 <div ng-include="'partials/navbar'"></div>
-<div class="hero">
-  <div class="container">
-    <h2>Hello, I'm Patrick. I'm a front end developer addicted to dazzling design, brilliant branding, and copious consumption of coffee.</h2>
-    <h3>(alliteration is fun)</h3>
+<div class="everythingButNav" ng-controller="landingPageCtrl">
+  <div class="hero" full-page>
+  	<div class="personal-intro">
+  		<h2>The portfolio of user interface and user experience designer, and front-end developer <span class="myName" ng-click="pusssh()">Patrick Cauley.</span></h2>
+  		<img src="images/landing.svg" alt="Landing Page Illustration - Monitor" class="monitor"> 
+  	</div>
   </div>
-</div>
-<div class="addictions">
-  <div class="container">
-    <h2>Past and Current Addictions</h2>
-    <div class="col-md-4">
-      <h3>Coffee</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, fugit, distinctio, eaque, unde ad explicabo beatae perspiciatis necessitatibus odit blanditiis nisi excepturi ea eveniet facere vel minus architecto atque quisquam.</p>
-    </div>
-    <div class="col-md-4">
-      <h3>UI/UX</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, natus nemo mollitia repudiandae vitae esse id temporibus magni excepturi et voluptatum officia. Nesciunt, officia, quibusdam at culpa ex beatae eos.</p>
-    </div>
-    <div class="col-md-4">
-      <h3>Front-End Development</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, facere, blanditiis corporis placeat est quibusdam distinctio laudantium deleniti animi numquam possimus suscipit reiciendis expedita assumenda ipsa fugit maiores non laboriosam!</p>
-    </div>
+  <div class="addictions" full-page>
+      <div class="addiction">
+        <h3>User Interface &amp; User Experience Design</h3>
+        <p>Designing effective interfaces and engaging experiences requires more than just a an indepth knowledge of graphic design. A great user experience depends on understanding your demographic, their culture and how they interact with their tools.</p>
+        <h4>Toolbox</h4>
+      </div>
+      <div class="addiction">
+        <h3>Front-End Development</h3>
+        <p>Design isn't simply how something looks, it's how it acts. A well designed user experience has to be a well developed one as well. Writing the code that powers my interfaces allows me to have complete control over making the perfect experience.</p>
+        <h4>Toolbox</h4>
+        <p>When you love what you do, the tools you use become a part of you. I think it's important to share the tools I've come to love with anyone looking to work with me.</p>
+        <carousel interval="myInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{$index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </slide>
+    </carousel>
   </div>
-</div>
-<div class="about">
-  <div class="container">
-    <div class="col-md-6">
-      <h2>About Cranes &amp; Caffeine</h2>
-      <p>
-        Cranes and Caffeine is simply an extension of myself, Patrick Cauley, official design nerd. I've always had a passion for graphic design and tinkering with the web, somewhere along the way I decided I wanted to do something with it. Starting out web design wasn't a career choice for me but a love affair, we had our first date when I was sixteen, in my bedroom with a stack of books, an old IBM model M keyboard, and as much coffee as I could brew. I spent years teaching myself as much as I could about graphic design, branding, and front-end development, putting in summers and long nights hunched over my keyboard to get the fullest understanding of how users interact with brands on the web. Graphic and web design were my first real passions and that translates into the work I do today for my clientle.
-      </p>
-    </div>
-    <div class="col-md-6">
-      <h3>Why Cranes &amp; Caffeine</h3>
-      <p>
-        Consuming prodigious amounts of caffineated beverages is what helped give me the free time between working full time and attending school to learn design. That's where the second portion of my alter ego comes from, the first portion originates with a simple hobby of folding origami cranes. Leaving a craned folded from some scrap of paper became a bit of a trademark of mine that I've done as long as I can remember.
-      </p>
-    </div>
+      </div>
+      <!--<div class="addiction">
+        <h3>Coffee</h3>
+        <p>Something has to bring together the design, developemt and implementation. I couldn't do it without a good amount of caffeine. Generally I prefer artisan coffee brewed in whatever the latest hipster methodology recommends but I'll settle for drip, or even energy drinks if I'm in a hurry.</p>
+      </div>-->
+  </div>
+  <div class="about" full-page>
+      <div class="">
+        <h2>About Cranes &amp; Caffeine</h2>
+        <img src="images/DesignNerd.svg" alt="Official Design Nerd" class="designNerd">
+        <p>
+          Cranes and Caffeine is simply an extension of myself, Patrick Cauley, official design nerd. I've always had a passion for graphic design and tinkering with the web, somewhere along the way I decided I wanted to do something withn it. Starting out web design wasn't a career choice for me but a love affair, we had our first date when I was sixteen, in my bedroom with a stack of books, an old IBM model M keyboard, and as much coffee as I could brew. I spent years teaching myself as much as I could about graphic design, branding, and front-end development, putting in summers and long nights hunched over my keyboard to get the fullest understanding of how users interact with brands on the web. Graphic and web design were my first real passions and that translates into the work I do today for my clientle.
+        </p>
+      </div>
+      <div class="">
+        <h3>Why Cranes &amp; Caffeine</h3>
+        <p>
+          Consuming prodigious amounts of caffineated beverages is what helped give me the free time between working full time and attending school to learn design. That's where the second portion of my alter ego comes from, the first portion originates with a simple hobby of folding origami cranes. Leaving a craned folded from some scrap of paper became a bit of a trademark of mine that I've done as long as I can remember.
+        </p>
+      </div>
   </div>
 </div>

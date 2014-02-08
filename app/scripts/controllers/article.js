@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cncv2App')
-  .controller('ArticleCtrl', function ($scope, $http, $location, Articles) {
+  .controller('ArticleCtrl', function ($scope, $http, $location, $routeParams, Articles) {
     $scope.create = function(){
     	var article = new Articles({
     		title: this.title,
@@ -41,11 +41,14 @@ angular.module('cncv2App')
     };
 
     $scope.findOne = function(){
+        console.log($routeParams);
     	Articles.get({
-    		articleId: $routeParams.articleId
+    		articleId: $routeParams.blogId
     	}, function(article){
     		$scope.article = article;
+            console.log(article);
     	});
+
     };
 
   });

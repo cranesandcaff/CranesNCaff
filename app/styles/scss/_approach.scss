@@ -1,0 +1,7 @@
+.copy{
+	@include outer-container;
+	padding-top: 10%;
+}
+.processMain{
+	@include outer-container;
+}

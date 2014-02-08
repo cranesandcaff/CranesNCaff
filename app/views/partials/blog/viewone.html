@@ -1,0 +1,11 @@
+<section class="container" ng-init="findOne()">
+	<article class="col-xs-8 col-md-offset-2">
+	    <h1>{{article.title}}</h1>
+	    <div ng-bind-html=" {{article.content}} "></div>
+	    <div ng-bind-html=" article.content "></div>
+	    <div>
+	        <span class="badge badge-success">Posted {{article.created | date:'short'}}</span>
+	        <a ng-show="currentUser._id == article.creator._id" href="/blog/{{article._id}}/edit">edit</a>
+	    </div>
+    </article>
+</section>

@@ -1,0 +1,46 @@
+.hero{
+	position: relative;
+	height:410px;
+	background-color: $brandBlue;
+	padding: 2rem;
+	margin-bottom: 1rem;
+}
+
+.ampersand{
+	background-image: url('../images/ampersand.svg');
+	width:100px;
+	height:100px;
+	display:inline-block;
+	vertical-align: middle;
+}
+.personal-intro{
+	@include outer-container;
+	margin:0 auto;
+	text-align: center;
+	color:$darkNeutral;
+	h2{
+		font-size:3rem;
+	} 
+}
+.monitor{
+	width:400px;
+	position: absolute;
+	bottom:0;
+	left:50%;
+	right:50%;
+}
+.addictions, .about{
+	@include outer-container;
+	@include row;
+}
+.addiction{
+	@include span-columns(6);
+}
+.designNerd{
+	width:75%;
+	display: block;
+	margin:0 auto;
+}
+.myName{
+	font-weight: 900;
+}

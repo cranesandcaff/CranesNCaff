@@ -1,11 +1,14 @@
 'use strict';
-
+var cncv2App = 
 angular.module('cncv2App', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'angular-medium-editor'
+  'angular-medium-editor',
+  'ngAnimate',
+  'headroom',
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -38,6 +41,10 @@ angular.module('cncv2App', [
       })
       .when('/blog', {
         templateUrl: 'partials/blog.html',
+        controller: 'ArticleCtrl'
+      })
+      .when('/blog/:blogId', {
+        templateUrl: 'partials/blog/viewone.html',
         controller: 'ArticleCtrl'
       })
       .when('/admin', {
@@ -75,10 +82,8 @@ angular.module('cncv2App', [
     }]);
   })
   .run(function ($rootScope, $location, Auth) {
-
     // Redirect to login if route requires auth and you're not logged in
-    $rootScope.$on('$routeChangeStart', function (event, next) {
-      
+    $rootScope.$on('$routeChangeStart', function (event, next) {      
       if (next.authenticate && !Auth.isLoggedIn()) {
         $location.path('/login');
       }

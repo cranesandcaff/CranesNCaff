@@ -1,0 +1,23 @@
+[
+  {
+    "tool": "AngularJS",
+    "logo": "images/vendorLogos/angularJS.svg",
+    "explanation": "AngularJS reimagines the web as a more dynamic platform. I craft formidable applications for the web primarily using this framework as my base."
+  },
+    {
+    "tool": "Laravel",
+    "logo": "images/vendorLogos/laravel.svg",
+    "explanation": "AngularJS reimagines the web as a more dynamic platform. I craft formidable applications for the web primarily using this framework as my base."
+  },
+    {
+    "tool": "Wordpress",
+    "logo": "images/vendorLogos/wordpress.svg",
+    "explanation": "AngularJS reimagines the web as a more dynamic platform. I craft formidable applications for the web primarily using this framework as my base."
+  },
+    {
+    "tool": "jQuery",
+    "logo": "images/vendorLogos/jQuery.svg",
+    "explanation": "AngularJS reimagines the web as a more dynamic platform. I craft formidable applications for the web primarily using this framework as my base."
+  }
+
+]
