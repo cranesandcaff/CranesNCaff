@@ -1,0 +1,13 @@
+<div class="carousel">
+	<div class="slide" ng-repeat="slide in slides" ng-show="slide.active">
+		<img ng-src="{{slide.logo}}">  
+        <h4>{{slide.tool}}</h4>
+        <p> {{slide.explanation}}</p> 
+	</div>
+	<a href="" ng-click="prev()" class="directional left">
+		<i class="fa fa-arrow-circle-left"></i>
+	</a>
+	<a href="" ng-click="next()" class="directional right">
+		<i class="fa fa-arrow-circle-right"></i>
+	</a>	
+</div>

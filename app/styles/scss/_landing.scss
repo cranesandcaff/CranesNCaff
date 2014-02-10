@@ -20,21 +20,28 @@
 	color:$darkNeutral;
 	h2{
 		font-size:3rem;
+		@include media(max-width 320px){
+			font-size:2rem;
+		}
 	} 
 }
 .monitor{
 	width:400px;
 	position: absolute;
-	bottom:0;
+	bottom:-1px;
 	left:50%;
 	right:50%;
 }
-.addictions, .about{
+.job-descript, .about{
 	@include outer-container;
 	@include row;
 }
-.addiction{
+.design, .dev{
+	padding:5px;
 	@include span-columns(6);
+	@include media(max-width 700px){
+		@include span-columns(12);
+	}
 }
 .designNerd{
 	width:75%;

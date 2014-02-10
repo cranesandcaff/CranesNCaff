@@ -18,9 +18,7 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
     shell: {
-        mongo: {
-            command: 'mongod'
-        }
+       
     },
     // Project settings
     yeoman: {
@@ -336,9 +334,9 @@ module.exports = function (grunt) {
 
     // Run some tasks in parallel to speed up the build process
     concurrent: {
-      server: [
-        'shell',
-        'compass:server'
+      server: [        
+        'compass:server',
+        'shell'
       ],
       test: [
         'compass'

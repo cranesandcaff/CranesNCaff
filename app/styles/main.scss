@@ -117,3 +117,29 @@ html{-webkit-font-smoothing: antialiased;}
 	}
 }
 
+@media all and (max-width:1000px){
+	.logo {
+		position: static;
+		background-image: url(../images/cnclogo.svg);
+		background-repeat:no-repeat;
+		display:block;
+		margin:0 auto;
+		margin-top: 1rem;
+		width:300px;
+	}
+	.globalNav{
+		padding-top: 0;
+		nav {		
+			position: static;
+			display:block;
+			margin:0 auto;
+			width: 100%;
+			padding: 0 0.5rem;
+	        
+			a{
+				margin:0 auto;
+				line-height: 0;
+			}	
+	    }  	
+	}
+}

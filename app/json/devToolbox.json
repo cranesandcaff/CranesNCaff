@@ -1,6 +1,7 @@
 [
   {
     "tool": "AngularJS",
+    "active":true,
     "logo": "images/vendorLogos/angularJS.svg",
     "explanation": "AngularJS reimagines the web as a more dynamic platform. I craft formidable applications for the web primarily using this framework as my base."
   },
@@ -19,5 +20,4 @@
     "logo": "images/vendorLogos/jQuery.svg",
     "explanation": "AngularJS reimagines the web as a more dynamic platform. I craft formidable applications for the web primarily using this framework as my base."
   }
-
 ]

@@ -7,8 +7,7 @@ angular.module('cncv2App', [
   'ngRoute',
   'angular-medium-editor',
   'ngAnimate',
-  'headroom',
-  'ui.bootstrap'
+  'headroom'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
