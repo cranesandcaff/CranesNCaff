@@ -2,7 +2,7 @@
 @import 'scss/bourbon/bourbon';
 @import 'scss/neat/neat';
 @import 'scss/bitters/bitters';
-@import 'Hover/scss/hover.scss';
+@import '../bower_components/Hover/scss/hover.scss';
 @import 'scss/variables';
 @import 'scss/landing';
 @import 'scss/typography';
@@ -10,6 +10,7 @@
 @import 'scss/submitArticle';
 @import 'scss/approach';
 @import 'scss/carousel';
+@import 'scss/work';
 
 html{-webkit-font-smoothing: antialiased;}
 
