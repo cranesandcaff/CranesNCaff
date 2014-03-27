@@ -1,5 +1,5 @@
 'use strict';
-
+//Was gonna do a carousel for my main page decided against it for a lot of reasons. Never deleted. May delete in future
 angular.module('cncv2App')
   .directive('carousel', function ($timeout) {
     return {

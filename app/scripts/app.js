@@ -82,6 +82,8 @@ angular.module('cncv2App', [
   })
   .run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in
+    //Cannot register without already being logged in -- This was by design because it was meant to be
+    //my own personal blog I didn't intend for other people to be able to register
     $rootScope.$on('$routeChangeStart', function (event, next) {      
       if (next.authenticate && !Auth.isLoggedIn()) {
         $location.path('/login');
